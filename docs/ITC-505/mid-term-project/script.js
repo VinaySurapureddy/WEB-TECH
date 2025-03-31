@@ -5,7 +5,7 @@ const story = {
             { text: "Go to work", next: "work" },
             { text: "Stay home", next: "home" }
         ],
-        imageLink: "https://www.https://www.google.com/url?sa=i&url=https%3A%2F%2Fwall.alphacoders.com%2Fbig.php%3Fi%3D1045630&psig=AOvVaw11ONYCwoqnjzU05xV7mRo0&ust=1743541194305000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIjV556btYwDFQAAAAAdAAAAABAE.com" // Add your link here
+        image: "https://img.freepik.com/premium-photo/group-teenagers-night-forest_763713-1961.jpg?%22"// Add your link here
     },
     work: {
         text: "At work, you're mistreated. Do you...",
@@ -13,7 +13,7 @@ const story = {
             { text: "Fight back", next: "fight" },
             { text: "Endure silently", next: "endure" }
         ],
-        imageLink: "https://www.example.com" // Add your link here
+        image: "https://www.example.com" // Add your link here
     },
     home: {
         text: "You stay home, watching TV with your mother. What do you do?",
@@ -21,7 +21,7 @@ const story = {
             { text: "Talk to her", next: "talk" },
             { text: "Ignore her", next: "ignore" }
         ],
-        imageLink: "https://www.example.com" // Add your link here
+        image: "https://www.example.com" // Add your link here
     },
     fight: {
         text: "You fight back and get fired. Your rage builds... What next?",
@@ -29,12 +29,12 @@ const story = {
             { text: "Embrace chaos", next: "joker" },
             { text: "Regret actions", next: "regret" }
         ],
-        imageLink: "https://www.example.com" // Add your link here
+        image: "https://www.example.com" // Add your link here
     },
     endure: {
         text: "You endure, but the pain lingers. The story ends here...",
         choices: [],
-        imageLink: "https://www.example.com" // Add your link here
+        image: "https://www.example.com" // Add your link here
     },
     joker: {
         text: "You fully embrace the Joker persona. The story ends here...",
