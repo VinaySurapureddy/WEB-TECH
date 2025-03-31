@@ -9,10 +9,10 @@
 <body>
     <div class="container">
         <!-- First Heading: "It's Story Time" -->
-        <h1 class="story-time">It's Story Time</h1>
+        <h1 class="story-time">Joker</h1>
 
         <!-- Second Heading: "Good vs Bad" -->
-        <h2 class="good-vs-bad">Good vs Bad</h2>
+        <!--<h2 class="good-vs-bad">JOKER</h2> -->
 
         <!-- Main Story Section -->
         <div class="story-container">
@@ -26,8 +26,45 @@
                 <img id="story-image" src="" alt="Story Image">
             </div>
         </div>
+
+        <!-- Addendum and Last Updated Section -->
+        <footer class="footer" style="margin-top: 10px; padding: 10px; background-color: #2f2f2f; color: #fff;">
+            <div class="addendum" style="max-width: 800px; margin: 0 auto; text-align: left;">
+                <h3 style="font-size: 20px; color: #ffd700; font-weight: bold; margin-bottom: 10px;">Addendum</h3>
+                <div class="addendum-item" style="margin-bottom: 15px;">
+                    <strong style="color: #ff6347;">Problem:</strong>
+                    <p style="font-size: 10px; color: #e0e0e0;">The challenge was to create an interactive game where users make decisions that shape the story. Ensuring that the user experience is seamless and engaging was key, while incorporating dynamic images and options.</p>
+                </div>
+                <div class="addendum-item" style="margin-bottom: 15px;">
+                    <strong style="color: #ff6347;">Solution:</strong>
+                    <p style="font-size: 10px; color: #e0e0e0;">The solution involved using JavaScript to control the flow of the story based on user choices. The choices are dynamically updated, and images change accordingly to reflect the decisions made, providing a rich, interactive experience. I ensured that the page layout, colors, and design were cohesive with the theme.</p>
+                </div>
+                <div class="addendum-item" style="margin-bottom: 15px;">
+                    <strong style="color: #ff6347;">Challenges:</strong>
+                    <p style="font-size: 10px; color: #e0e0e0;">A major difficulty was handling asynchronous updates of the story text and images based on the user's decisions. Additionally, ensuring that the game was visually appealing and maintained a smooth, coherent flow required a lot of trial and error, especially when it came to layout adjustments and design elements.</p>
+                </div>
+            </div>
+
+            <p style="font-size: 10px; text-align: center; color: #e0e0e0; margin-top: 15px;">Last updated: <span id="lastModified"></span></p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+
+    <style>
+        /* Ensures all images are the same size */
+        .image-container img {
+            width: 150%;
+            height: 400px; /* Set a fixed height for consistency */
+            object-fit: cover; /* Ensures the image scales and fills the space without distorting */
+            max-width: 700px; /* Set a maximum width */
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 </body>
 </html>

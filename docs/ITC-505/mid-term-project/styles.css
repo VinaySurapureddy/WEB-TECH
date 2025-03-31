@@ -5,99 +5,72 @@
     box-sizing: border-box;
 }
 
-/* Body and container setup */
+/* Set a background image for the entire body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #222;
-    color: #fff;
+    background-image: url('https://wallpaper.forfun.com/fetch/75/75fd482e70c5b99cd23227d0bd6c2563.jpeg'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    color: white;  /* Make text white for better contrast */
+    overflow: hidden;
 }
 
-/* Main container with white border */
+/* Container styling */
 .container {
-    text-align: center;
     width: 80%;
-    max-width: 600px;
-    background-color: #333;
-    border-radius: 10px;
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slight black overlay to make text more readable */
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-    border: 3px solid white;  /* White border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #fff;
 }
 
-/* First Heading - "It's Story Time" */
-.story-time {
-    font-size: 2.5rem;
-    color: #ff6347; /* Tomato color */
-    margin-bottom: 20px;
+/* Title styling */
+h1, h2 {
+    color: #fff;  /* White text for better visibility on dark background */
 }
 
-/* Second Heading - "Good vs Bad" */
-.good-vs-bad {
-    font-size: 2rem;
-    color: #ffb84d; /* Golden color */
-    margin-bottom: 30px;
-}
-
-/* Story text */
-.story-container {
-    margin-bottom: 20px;
-}
-
+/* Story text and choices */
 .story-text {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #ccc;
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-/* Choices buttons style */
+/* Styling for the choice buttons */
 .choices-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 button {
-    background-color: #444;
+    background-color: #333;
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 16px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: 45%;
 }
 
 button:hover {
-    background-color: #666;
+    background-color: #555;
 }
 
-/* Centered Image style */
+/* Image styling */
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
-#story-image {
+.image-container img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: opacity 0.5s ease;
-}
-
-/* Aesthetic Fade Effects */
-.fade-out {
-    opacity: 0;
-}
-
-.fade-in {
-    opacity: 1;
+    border-radius: 10px;
 }
