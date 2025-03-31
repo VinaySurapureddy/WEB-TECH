@@ -9,6 +9,7 @@
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: auto 1fr auto;
     gap: 10px;
+    padding: 10px;
 }
 
 .header {
@@ -17,17 +18,22 @@
     color: white;
     padding: 20px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .menu {
     grid-area: menu;
     background-color: #f0f0f0;
     padding: 20px;
+    border-radius: 5px;
 }
 
 .content {
     grid-area: content;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .ad {
@@ -35,6 +41,7 @@
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .footer {
@@ -43,6 +50,7 @@
     color: white;
     padding: 20px;
     text-align: center;
+    border-radius: 5px;
 }
 
 /* Menu styling */
@@ -59,21 +67,29 @@
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .menu a:hover {
+    background-color: #ddd;
     color: #4a6fa5;
 }
 
 /* Content styling */
 .number-input {
     margin: 20px 0;
+    display: flex;
+    gap: 10px;
 }
 
 #numberInput {
     padding: 8px;
     width: 200px;
-    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 #analyzeBtn {
@@ -81,7 +97,9 @@
     background-color: #4a6fa5;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 #analyzeBtn:hover {
@@ -101,11 +119,19 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }
 
 .ad a {
     text-decoration: none;
     color: #333;
+    display: block;
+}
+
+.ad p {
+    margin: 0;
+    font-weight: bold;
 }
 
 /* Footer styling */
@@ -128,5 +154,17 @@
             "footer";
         grid-template-columns: 1fr;
         grid-template-rows: auto auto 1fr auto auto;
+    }
+    
+    .number-input {
+        flex-direction: column;
+    }
+    
+    #numberInput {
+        width: 100%;
+    }
+    
+    #analyzeBtn {
+        width: 100%;
     }
 }
