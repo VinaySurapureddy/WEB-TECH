@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Holy Grail Layout with JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="holy-grail">
+        <header class="header">
+            <h1>JavaScript Number Analyzer</h1>
+        </header>
+        
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <h2>Number Properties Analyzer</h2>
+            <p>Enter a number to analyze its mathematical properties:</p>
+            
+            <div class="number-input">
+                <input type="number" id="numberInput" placeholder="Enter a number">
+                <button id="analyzeBtn">Analyze</button>
+            </div>
+            
+            <div id="results" class="results">
+                <!-- Results will be displayed here -->
+            </div>
+        </main>
+        
+        <aside class="ad">
+            <a href="https://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/91hU6VYrSYL._AC_UF1000,1000_QL80_.jpg" alt="JavaScript: The Definitive Guide Book">
+                <p>Learn more JavaScript!</p>
+            </a>
+        </aside>
+        
+        <footer class="footer">
+            <div class="addendum">
+                <h3>Addendum</h3>
+                <p><strong>Problem Solved:</strong> Created a number analyzer that checks various mathematical properties of an input number.</p>
+                <p><strong>Solution:</strong> The JavaScript code checks if the number is even/odd, prime, perfect square, Fibonacci number, and calculates its factorial. Event listeners handle the button click and input changes.</p>
+                <p><strong>Difficulties:</strong> Initially had issues with the prime number checker for values less than 2. Solved by adding special cases for 0, 1, and negative numbers. Also had to handle non-integer inputs by rounding them.</p>
+            </div>
+            <p>Last updated: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+/* Holy Grail Layout with CSS Grid */
+.holy-grail {
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas:
+        "header header header"
+        "menu content ad"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: #4a6fa5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.content {
+    grid-area: content;
+    padding: 20px;
+}
+
+.ad {
+    grid-area: ad;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #4a6fa5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Menu styling */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #4a6fa5;
+}
+
+/* Content styling */
+.number-input {
+    margin: 20px 0;
+}
+
+#numberInput {
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#analyzeBtn {
+    padding: 8px 16px;
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#analyzeBtn:hover {
+    background-color: #3a5a8f;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Ad styling */
+.ad img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.ad a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Footer styling */
+.addendum {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .holy-grail {
+        grid-template-areas:
+            "header"
+            "menu"
+            "content"
+            "ad"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+    }
+}
