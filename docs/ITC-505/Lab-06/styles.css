@@ -38,10 +38,10 @@
 
 .ad {
     grid-area: ad;
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
+    background-color: #fff;
+    padding: 15px;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .footer {
@@ -114,24 +114,54 @@
     border-radius: 5px;
 }
 
-/* Ad styling */
-.ad img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-.ad a {
+/* Advertisement Styles */
+.ad-link {
     text-decoration: none;
     color: #333;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.ad p {
-    margin: 0;
+.ad-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.ad-text {
+    padding: 0 5px;
+}
+
+.ad-text h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #0066c0;
+}
+
+.ad-text p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+}
+
+.shop-now {
+    display: inline-block;
+    background-color: #FF9900;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
     font-weight: bold;
+}
+
+.ad-link:hover .shop-now {
+    background-color: #FF8C00;
+}
+
+.ad-link:hover h3 {
+    text-decoration: underline;
 }
 
 /* Footer styling */
