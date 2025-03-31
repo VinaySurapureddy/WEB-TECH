@@ -17,7 +17,7 @@ body {
     margin: 0;
 }
 
-/* Main container */
+/* Main container with white border */
 .container {
     text-align: center;
     width: 80%;
@@ -26,13 +26,21 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    border: 3px solid white;  /* White border */
 }
 
-/* Heading style */
-h1 {
+/* First Heading - "It's Story Time" */
+.story-time {
+    font-size: 2.5rem;
+    color: #ff6347; /* Tomato color */
+    margin-bottom: 20px;
+}
+
+/* Second Heading - "Good vs Bad" */
+.good-vs-bad {
     font-size: 2rem;
+    color: #ffb84d; /* Golden color */
     margin-bottom: 30px;
-    color: #ffb84d; /* A golden color for emphasis */
 }
 
 /* Story text */

@@ -5,7 +5,7 @@ const story = {
             { text: "Go to work", next: "work" },
             { text: "Stay home", next: "home" }
         ],
-        image: "images/start.jpg"
+        image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwall.alphacoders.com%2Fbig.php%3Fi%3D1045630&psig=AOvVaw11ONYCwoqnjzU05xV7mRo0&ust=1743541194305000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIjV556btYwDFQAAAAAdAAAAABAE.jpg"
     },
     work: {
         text: "At work, you're mistreated. Do you...",
