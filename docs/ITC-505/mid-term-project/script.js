@@ -5,7 +5,7 @@ const story = {
             { text: "Go to work", next: "work" },
             { text: "Stay home", next: "home" }
         ],
-        image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwall.alphacoders.com%2Fbig.php%3Fi%3D1045630&psig=AOvVaw11ONYCwoqnjzU05xV7mRo0&ust=1743541194305000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIjV556btYwDFQAAAAAdAAAAABAE.jpg"
+        imageLink: "https://www.https://www.google.com/url?sa=i&url=https%3A%2F%2Fwall.alphacoders.com%2Fbig.php%3Fi%3D1045630&psig=AOvVaw11ONYCwoqnjzU05xV7mRo0&ust=1743541194305000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIjV556btYwDFQAAAAAdAAAAABAE.com" // Add your link here
     },
     work: {
         text: "At work, you're mistreated. Do you...",
@@ -13,7 +13,7 @@ const story = {
             { text: "Fight back", next: "fight" },
             { text: "Endure silently", next: "endure" }
         ],
-        image: "images/work.jpg"
+        imageLink: "https://www.example.com" // Add your link here
     },
     home: {
         text: "You stay home, watching TV with your mother. What do you do?",
@@ -21,7 +21,7 @@ const story = {
             { text: "Talk to her", next: "talk" },
             { text: "Ignore her", next: "ignore" }
         ],
-        image: "images/home.jpg"
+        imageLink: "https://www.example.com" // Add your link here
     },
     fight: {
         text: "You fight back and get fired. Your rage builds... What next?",
@@ -29,32 +29,32 @@ const story = {
             { text: "Embrace chaos", next: "joker" },
             { text: "Regret actions", next: "regret" }
         ],
-        image: "images/fight.jpg"
+        imageLink: "https://www.example.com" // Add your link here
     },
     endure: {
         text: "You endure, but the pain lingers. The story ends here...",
         choices: [],
-        image: "images/endure.jpg"
+        imageLink: "https://www.example.com" // Add your link here
     },
     joker: {
         text: "You fully embrace the Joker persona. The story ends here...",
         choices: [],
-        image: "images/joker.jpg"
+        imageLink: "https://www.example.com" // Add your link here
     },
     regret: {
         text: "You regret everything and spiral further into despair. The story ends here...",
         choices: [],
-        image: "images/regret.jpg"
+        imageLink: "https://www.example.com" // Add your link here
     },
     talk: {
         text: "You talk to your mother, but it doesn't change much. The story ends here...",
         choices: [],
-        image: "images/talk.jpg"
+        imageLink: "https://www.example.com" // Add your link here
     },
     ignore: {
         text: "Ignoring her, you feel even more isolated. The story ends here...",
         choices: [],
-        image: "images/ignore.jpg"
+        imageLink: "https://www.example.com" // Add your link here
     }
 };
 
@@ -65,10 +65,17 @@ function startGame() {
 function updateStory(step) {
     const stage = story[step];
     document.getElementById("story").innerText = stage.text;
-    document.getElementById("story-image").src = stage.image;
+
+    // Create a clickable link text
+    const imageLink = document.createElement("a");
+    imageLink.href = stage.imageLink;  // Use the link from the story object.
+    imageLink.target = "_blank";  // Open the link in a new tab.
+    imageLink.innerText = "Click here for more information"; // Text that the user will click on.
+
+    // Clear previous choices and display the current choices
     const choicesDiv = document.getElementById("choices");
     choicesDiv.innerHTML = "";
-    
+
     if (stage.choices.length > 0) {
         stage.choices.forEach(choice => {
             let button = document.createElement("button");
@@ -82,6 +89,11 @@ function updateStory(step) {
         restartButton.onclick = startGame;
         choicesDiv.appendChild(restartButton);
     }
+
+    // Replace the previous image container with the link text
+    const linkContainer = document.getElementById("image-container");
+    linkContainer.innerHTML = "";  // Clear previous content
+    linkContainer.appendChild(imageLink); // Append the link text
 }
 
 document.addEventListener("DOMContentLoaded", startGame);
