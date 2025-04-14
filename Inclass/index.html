@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC 505 - Interactive Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive JavaScript Demo</h1>
+        <p id="info">Created by Vinay | ITC 505 | <span id="currentDate"></span></p>
+    </header>
+
+    <main>
+        <section class="interactive-section">
+            <h2>Image Rollover Effect</h2>
+            <div class="image-container">
+                <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
+                     alt="Nature landscape" 
+                     id="rolloverImage"
+                     onmouseover="changeImage()" 
+                     onmouseout="restoreImage()">
+            </div>
+            <p>Hover over the image to see the effect</p>
+        </section>
+
+        <!-- Rest of your HTML remains the same -->
+        <section class="interactive-section">
+            <h2>Color Changing Button</h2>
+            <button id="colorButton">Click Me!</button>
+            <p>Click the button to change its color</p>
+        </section>
+
+        <section class="interactive-section">
+            <h2>Text Input Alert</h2>
+            <form id="textForm">
+                <input type="text" id="userInput" placeholder="Enter some text">
+                <button type="submit">Submit</button>
+            </form>
+            <p>Submit text to see an alert message</p>
+        </section>
+
+        <section class="interactive-section">
+            <h2>Number Checker</h2>
+            <input type="number" id="numberInput" placeholder="Enter a number">
+            <button id="checkNumber">Check Number</button>
+            <p id="numberResult"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> ITC 505 Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
